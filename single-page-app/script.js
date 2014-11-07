@@ -1,24 +1,27 @@
-var aboutApp = angular.module('aboutApp', ['ngRoute']);
-
-aboutApp.controller('mainController', function($scope){
-    $routeProvider
-
+var aboutApp = angular.module('aboutApp', ['ngRoute'])
+  .config(function($routeProvider, $locationProvider){
       //HOMEPAGE
-      .when('/', {
+      $routeProvider.when('/', {
         templateUrl : 'pages/home.html',
         controller  : 'mainController'
       })
 
       //ABOUT PAGE
-      .when('/about', {
+      $routeProvider.when('/about', {
         templateUrl : 'pages/about.html',
         controller  : 'aboutController'
       })
 
-      .when('/contact', {
+      $routeProvider.when('/contact', {
           templateUrl : 'pages/contact.html',
           controller  : 'contactController'
       });
+
+      $routeProvider.otherwise({
+        redirectTo    : '/'
+      });
+
+      $locationProvider.html5Mode(true);
 });
 
 aboutApp.controller('mainController', function($scope){
