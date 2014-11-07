@@ -2,12 +2,12 @@
 <html ng-app="aboutApp">
 <head>
   <!-- load bootstrap and fontawesome via CDN -->
-  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" />
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" />
 
   <!-- load angular and angular route via CDN -->
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
-  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
 
   <!-- Load Angular App -->
   <script src="script.js"></script>
@@ -33,7 +33,7 @@
 
     <!-- MAIN CONTENT AND INJECTED VIEWS -->
     <div id="main">
-        {{ message }}
+        <div ng-view></div>
         <!-- angular templating -->
         <!-- this is where content will be injected -->
 
